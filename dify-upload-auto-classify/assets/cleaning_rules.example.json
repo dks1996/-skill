@@ -1,0 +1,40 @@
+{
+  "_说明": "把本文件内容整体复制到 config.json 的 clean_rules 字段。所有关键词和名称均为通用示例，请按你的业务修改。",
+
+  "types": [
+    {
+      "name": "credit_report",
+      "label": "征信报告",
+      "keywords": ["个人征信报告", "企业信用报告", "征信", "信用报告", "贷款余额", "信用记录"],
+      "add_subject_prefix": true,
+      "subject_label": "征信主体",
+      "subject_regex": "(?:姓名|名称)[\\s:：]*([^\\n，,。]{2,20})",
+      "prefix_template": "{subject}的{label}："
+    },
+    {
+      "name": "tender",
+      "label": "招标文件",
+      "keywords": ["招标文件", "采购", "投标", "招标需求", "中标"],
+      "add_subject_prefix": false
+    },
+    {
+      "name": "contract",
+      "label": "合同",
+      "keywords": ["合同", "协议", "甲方", "乙方"],
+      "add_subject_prefix": false
+    }
+  ],
+
+  "fragment_repair": {
+    "min_lines": 20,
+    "short_line_max_chars": 3,
+    "short_line_ratio": 0.5,
+    "merge_length": 120
+  },
+
+  "normalize": {
+    "collapse_blank_lines": true,
+    "strip_line_tail_spaces": true,
+    "drop_page_numbers": true
+  }
+}

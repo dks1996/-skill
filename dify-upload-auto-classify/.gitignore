@@ -1,0 +1,15 @@
+# 认证与个人信息，永远不要提交
+config.json
+cookies.json
+*.state.json
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 系统
+.DS_Store
+Thumbs.db

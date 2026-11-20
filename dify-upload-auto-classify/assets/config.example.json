@@ -1,0 +1,23 @@
+{
+  "_说明": "复制本文件为 config.json 后填写。带 << >> 的是占位符，必须替换。config.json 已被 .gitignore 排除，不会上传。",
+
+  "dify_base_url": "http://dify.example.com:8080",
+  "dataset_id": "把这里换成你的知识库UUID",
+  "pipeline_id": "把这里换成你的流水线UUID",
+
+  "_cookies说明": "二选一：填 cookies_file 路径，或不填并用环境变量 DIFY_ACCESS_TOKEN / DIFY_CSRF_TOKEN",
+  "cookies_file": "./cookies.json",
+
+  "chunk_params": {
+    "delimiter": "\n\n",
+    "max_chunk_length": 800,
+    "chunk_overlap_length": 80,
+    "replace_consecutive_spaces_newlines_tabs": true,
+    "delete_all_urls_and_email_addresses": false
+  },
+
+  "_clean_rules说明": "留空 {} 则使用内置通用默认规则；需要按业务识别文档类型时见 cleaning_rules.example.json",
+  "clean_rules": {},
+
+  "test_file": "./sample_fragment.txt"
+}
